@@ -1,0 +1,224 @@
+.home-gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.home-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
+}
+
+.featured-collections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.featured-collection-card {
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.featured-collection-card:hover {
+  transform: translateY(-2px);
+}
+
+.featured-collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.collection-badge {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  background-color: #E7FF86;
+  color: var(--dark-gray-2);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 15px;
+  border-radius: 29px;
+}
+
+.collection-button {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 153px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--light-gray-3);
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.collection-button:hover {
+  background-color: var(--white);
+}
+
+.category-icon-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 8px;
+}
+
+.category-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--dark-gray-2);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.category-icon-circle {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12.5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.category-icon-item:hover .category-icon-circle {
+  transform: translateY(-3px);
+}
+
+.icon-flipped {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.special-offer {
+  background-color: var(--white);
+  width: 100%;
+  padding: 72px 24px;
+}
+
+.special-offer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.special-offer-media {
+  position: relative;
+  width: 520px;
+  max-width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.special-offer-circle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  max-width: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(66, 0, 255, 0.25) -40.67%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.special-offer-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
+.special-offer-content {
+  max-width: 589px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.special-offer-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.75px;
+}
+
+.special-offer-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 50px;
+  color: var(--dark-gray-2);
+}
+
+.special-offer-text {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--dark-gray-2);
+}
+
+.special-offer-button {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--light-gray-3);
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.special-offer-button:hover {
+  background-color: var(--tertiary);
+}
+
+@media (max-width: 960px) {
+  .special-offer-container {
+    flex-direction: column;
+  }
+
+  .special-offer-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-collections {
+    grid-template-columns: 1fr;
+  }
+
+  .category-icon-list {
+    gap: 24px;
+  }
+}

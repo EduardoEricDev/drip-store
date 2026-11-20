@@ -1,0 +1,107 @@
+.listing-page {
+  max-width: 1240px;
+  margin: 40px auto 64px;
+  padding: 0 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.listing-sidebar {
+  width: 308px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sort-box {
+  width: 308px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sort-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.sort-select {
+  width: 308px;
+  height: 60px;
+  padding: 0 16px;
+  border: 1px solid var(--dark-gray-2);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--dark-gray-2);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-box {
+  width: 308px;
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.filter-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-box-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.filter-clear-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-divider {
+  border: none;
+  border-top: 1px solid var(--light-gray-2);
+  margin: 18px 0;
+}
+
+.filter-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.listing-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.listing-empty {
+  background-color: var(--white);
+  padding: 32px;
+  border-radius: 4px;
+  color: var(--dark-gray-3);
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .listing-page {
+    flex-direction: column;
+  }
+
+  .listing-sidebar,
+  .sort-box,
+  .sort-select,
+  .filter-box {
+    width: 100%;
+  }
+}
